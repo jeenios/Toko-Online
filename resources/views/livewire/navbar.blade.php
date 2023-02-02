@@ -20,7 +20,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach($ligas as $liga)
-                                <li><a class="dropdown-item" href="#">{{$liga->nama}}</a></li>
+                                <li><a class="dropdown-item" href="{{route('products.liga', $liga->id)}}">{{$liga->nama}}</a></li>
                                 @endforeach
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{{route('products')}}">Semua Liga</a></li>
@@ -31,6 +31,13 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Keranjang <i class="fas fa-shopping-bag"></i>
+                                @if ($jumlah_pesanan !== 0)
+                                    <span class="badge bg-danger">{{$jumlah_pesanan}}</span>
+                                @endif
+                            </a>
+                        </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

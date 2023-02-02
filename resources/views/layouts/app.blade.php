@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet">
+    
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

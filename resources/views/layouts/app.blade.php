@@ -27,11 +27,14 @@
         <livewire:navbar/>
 
         <main class="py-4">
+
             @yield('content')
-            @include('layouts.footer')
-            
+            @include('layouts.footer')   
+
         </main>
     </div>
+
     @livewireScripts
+    
 </body>
 </html>
